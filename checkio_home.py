@@ -1,11 +1,16 @@
-# Three Words
-"""You are given a string with words and numbers separated by whitespaces (one space). 
-The words contains only letters. You should check if the string contains three words in succession . 
-For example, the string "start 5 one two three 7 end" contains three words in succession.
+""" Split List
+You have to split a given array into two arrays. If it has an odd amount of elements, 
+then the first array should have more elements. If it has no elements, then two empty arrays should be returned.
 
-Input: A string with words.
-Output: The answer as a boolean.
 """
+import math
+def split_list(items):
+    x = math.ceil(len(items) / 2)
+    lg = items[:x]
+    ld = items[x:]
+    sliced_list = [lg, ld]
+    return sliced_list
 
-def checkio_words(words):
-    pass
+
+
+
