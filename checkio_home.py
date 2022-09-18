@@ -14,3 +14,40 @@ def split_list(items):
 
 
 
+def second_index(text, symbol):
+    """
+    returns the second index of a symbol in a given text
+    """
+    if symbol == '':
+        return None
+    if symbol in text:
+        return text.rindex(symbol, 2)
+    elif symbol not in text:
+        return 0 or None
+
+
+
+print(second_index('sims', 'a'))
+
+def second_index(text, symbol):
+    """
+    returns the second index of a symbol in a given text
+    """
+    
+    occurence = 0
+    for i in text:
+        if i == symbol:
+            occurence += 1
+            if occurence > 1:
+                return text.index(i)
+
+
+
+print(second_index('hello', 'l'))
+
+
+
+
+text = 'Hello world'
+if 'o' in text:
+    print(text.index('o'))
